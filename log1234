@@ -1,0 +1,897 @@
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh+dev10@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./screens/ios/ios/tile_setup_screen.rb:70:in `btooth_enabled'
+     # ./screens/ios/ios/tile_setup_screen.rb:31:in `check_and_fix_permissions'
+     # ./helpers/tile_helpers.rb:80:in `login_with'
+     # ./spec/ios/login_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./screens/ios/ios/tile_setup_screen.rb:70:in `btooth_enabled'
+     # ./screens/ios/ios/tile_setup_screen.rb:31:in `check_and_fix_permissions'
+     # ./helpers/tile_helpers.rb:80:in `login_with'
+     # ./spec/ios/login_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 1688 minutes 21 seconds (files took 0.67752 seconds to load)
+3 examples, 2 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+
+:WebDriver::Error::UnknownError:
+            An unknown server-side error occurred while processing the command. Original error: Unable to launch WebDriverAgent because of xcodebuild failure: "xcodebuild failed with code 65". Make sure you follow the tutorial at https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md. Try to remove the WebDriverAgentRunner application from the device if it is installed and reboot the device.
+          # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+     1.2) Failure/Error: @driver.quit
+
+          NoMethodError:
+            undefined method `quit' for nil:NilClass
+          # ./spec/spec_helper.rb:91:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 28.55 seconds (files took 0.67484 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Got 0 failures and 2 other errors:
+
+     1.1) Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+          Net::ReadTimeout:
+            Net::ReadTimeout
+          # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+     1.2) Failure/Error: @driver.quit
+
+          NoMethodError:
+            undefined method `quit' for nil:NilClass
+          # ./spec/spec_helper.rb:91:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 4 minutes 0 seconds (files took 0.70685 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     NoMethodError:
+       undefined method `close_app' for #<Selenium::WebDriver::Remote::Driver:0x007fe061305e78>
+       Did you mean?  close
+     # ./helpers/tile_helpers.rb:66:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 2 minutes 17.8 seconds (files took 1.37 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./screens/ios/ios/tile_login_screen.rb:23:in `btn_wrong_login'
+     # ./screens/ios/ios/tile_login_screen.rb:79:in `login_with'
+     # ./helpers/tile_helpers.rb:65:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 50.21 seconds (files took 2.05 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     NameError:
+       undefined local variable or method `alert' for #<TileLoginScreen:0x007fbe80e609d8>
+     # ./screens/ios/ios/tile_login_screen.rb:81:in `block in login_with'
+     # ./screens/ios/ios/tile_login_screen.rb:81:in `login_with'
+     # ./helpers/tile_helpers.rb:65:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 1 minute 54.29 seconds (files took 2.11 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Got 0 failures and 2 other errors:
+
+     1.1) Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+          Selenium::WebDriver::Error::UnknownError:
+            An unknown server-side error occurred while processing the command. Original error: Unable to launch WebDriverAgent because of xcodebuild failure: "xcodebuild failed with code 65". Make sure you follow the tutorial at https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md. Try to remove the WebDriverAgentRunner application from the device if it is installed and reboot the device.
+          # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+     1.2) Failure/Error: @driver.quit
+
+          NoMethodError:
+            undefined method `quit' for nil:NilClass
+          # ./spec/spec_helper.rb:91:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 53.59 seconds (files took 1.99 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Got 0 failures and 2 other errors:
+
+     1.1) Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+          Net::ReadTimeout:
+            Net::ReadTimeout
+          # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+     1.2) Failure/Error: @driver.quit
+
+          NoMethodError:
+            undefined method `quit' for nil:NilClass
+          # ./spec/spec_helper.rb:91:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 4 minutes 0 seconds (files took 2.09 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Got 0 failures and 2 other errors:
+
+     1.1) Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+          Selenium::WebDriver::Error::UnknownError:
+            An unknown server-side error occurred while processing the command. Original error: Unable to start WebDriverAgent session because of xcodebuild failure: "Could not proxy command to remote server. Original error: Error: read ECONNRESET". Make sure you follow the tutorial at https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md. Try to remove the WebDriverAgentRunner application from the device if it is installed and reboot the device.
+          # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+     1.2) Failure/Error: @driver.quit
+
+          NoMethodError:
+            undefined method `quit' for nil:NilClass
+          # ./spec/spec_helper.rb:91:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 1 minute 50.93 seconds (files took 2.1 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./screens/ios/ios/tile_login_screen.rb:23:in `btn_wrong_login'
+     # ./screens/ios/ios/tile_login_screen.rb:82:in `login_with'
+     # ./helpers/tile_helpers.rb:65:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 1 minute 1.23 seconds (files took 0.67329 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should not allow users to login with invalid credentials (FAILED - 1)
+
+Failures:
+
+  1) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     NoMethodError:
+       undefined method `close_app' for #<Selenium::WebDriver::Remote::Driver:0x007f92eed3fdf0>
+       Did you mean?  close
+     # ./helpers/tile_helpers.rb:66:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 1 minute 38 seconds (files took 0.73944 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+  should not allow users to login with invalid credentials (FAILED - 3)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh+dev10@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./screens/ios/ios/tile_login_screen.rb:23:in `btn_wrong_login'
+     # ./screens/ios/ios/tile_login_screen.rb:82:in `login_with'
+     # ./helpers/tile_helpers.rb:76:in `login_with'
+     # ./spec/ios/login_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./screens/ios/ios/tile_login_screen.rb:23:in `btn_wrong_login'
+     # ./screens/ios/ios/tile_login_screen.rb:82:in `login_with'
+     # ./helpers/tile_helpers.rb:76:in `login_with'
+     # ./spec/ios/login_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     Selenium::WebDriver::Error::UnknownError:
+       Method is not implemented
+     # ./helpers/tile_helpers.rb:66:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 2 minutes 40.8 seconds (files took 0.76529 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+  should not allow users to login with invalid credentials (FAILED - 3)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Got 0 failures and 2 other errors:
+
+     1.1) Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+          Selenium::WebDriver::Error::UnknownError:
+            An unknown server-side error occurred while processing the command. Original error: Unable to start WebDriverAgent session because of xcodebuild failure: "Could not proxy command to remote server. Original error: Error: read ECONNRESET". Make sure you follow the tutorial at https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md. Try to remove the WebDriverAgentRunner application from the device if it is installed and reboot the device.
+          # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+     1.2) Failure/Error: @driver.quit
+
+          NoMethodError:
+            undefined method `quit' for nil:NilClass
+          # ./spec/spec_helper.rb:91:in `block (2 levels) in <top (required)>'
+          # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./helpers/tile_helpers.rb:34:in `wait_continue_alert'
+     # ./helpers/tile_helpers.rb:86:in `login_with'
+     # ./spec/ios/login_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     NameError:
+       undefined local variable or method `btn_wrong_login' for #<TileHelpers:0x007fc1961d6eb0>
+     # ./helpers/tile_helpers.rb:67:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 4 minutes 37.2 seconds (files took 0.90307 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+  should not allow users to login with invalid credentials (FAILED - 3)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh+dev10@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./helpers/tile_helpers.rb:34:in `wait_continue_alert'
+     # ./helpers/tile_helpers.rb:88:in `login_with'
+     # ./spec/ios/login_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+     Net::ReadTimeout:
+       Net::ReadTimeout
+     # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+     Net::ReadTimeout:
+       Net::ReadTimeout
+     # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 274 minutes 58 seconds (files took 2.12 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+  should not allow users to login with invalid credentials (FAILED - 3)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+     Selenium::WebDriver::Error::UnknownError:
+       An unknown server-side error occurred while processing the command. Original error: Unable to launch WebDriverAgent because of xcodebuild failure: "xcodebuild failed with code 65". Make sure you follow the tutorial at https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md. Try to remove the WebDriverAgentRunner application from the device if it is installed and reboot the device.
+     # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./helpers/tile_helpers.rb:34:in `wait_continue_alert'
+     # ./helpers/tile_helpers.rb:98:in `login_with'
+     # ./spec/ios/login_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
+
+     Net::ReadTimeout:
+       Net::ReadTimeout
+     # ./spec/spec_helper.rb:78:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 6 minutes 9 seconds (files took 2.12 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+  should not allow users to login with invalid credentials (FAILED - 3)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh+dev10@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./helpers/tile_helpers.rb:34:in `wait_continue_alert'
+     # ./helpers/tile_helpers.rb:98:in `login_with'
+     # ./spec/ios/login_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./helpers/tile_helpers.rb:34:in `wait_continue_alert'
+     # ./helpers/tile_helpers.rb:98:in `login_with'
+     # ./spec/ios/login_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     NameError:
+       undefined local variable or method `btn_wrong_login' for #<TileHelpers:0x007fbcc5cc1238>
+     # ./helpers/tile_helpers.rb:79:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 2 minutes 53.9 seconds (files took 1.94 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+  should not allow users to login with invalid credentials (FAILED - 3)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh+dev10@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./helpers/tile_helpers.rb:32:in `btn_ignore'
+     # ./helpers/tile_helpers.rb:40:in `wait_continue_alert'
+     # ./helpers/tile_helpers.rb:112:in `login_with'
+     # ./spec/ios/login_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./helpers/tile_helpers.rb:32:in `btn_ignore'
+     # ./helpers/tile_helpers.rb:40:in `wait_continue_alert'
+     # ./helpers/tile_helpers.rb:112:in `login_with'
+     # ./spec/ios/login_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     NameError:
+       undefined local variable or method `btn_wrong_login' for #<TileHelpers:0x007f8d99eb50b8>
+       Did you mean?  btn_allow_notification
+     # ./helpers/tile_helpers.rb:92:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 4 minutes 7.9 seconds (files took 1.98 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+
+An error occurred while loading ./spec/ios/login_spec.rb.
+Failure/Error: require_all "#{File.join(File.expand_path(File.dirname(__FILE__)), '..', 'screens', 'ios')}"
+
+SyntaxError:
+  /Users/vibhadbaux/Documents/TileCodeRepository/tileapp_e2e-master/screens/ios/ios/tile_setup_screen.rb:110: syntax error, unexpected end-of-input, expecting keyword_end
+# ./spec/spec_helper.rb:21:in `<top (required)>'
+# ./spec/ios/login_spec.rb:3:in `require_relative'
+# ./spec/ios/login_spec.rb:3:in `<top (required)>'
+Run options: exclude {:disabled=>true}
+
+All examples were filtered out
+
+Finished in 0.00024 seconds (files took 1.86 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+
+An error occurred while loading ./spec/ios/login_spec.rb.
+Failure/Error: require_all "#{File.join(File.expand_path(File.dirname(__FILE__)), '..', 'screens', 'ios')}"
+
+SyntaxError:
+  /Users/vibhadbaux/Documents/TileCodeRepository/tileapp_e2e-master/screens/ios/ios/tile_setup_screen.rb:106: syntax error, unexpected end-of-input, expecting keyword_end
+# ./spec/spec_helper.rb:21:in `<top (required)>'
+# ./spec/ios/login_spec.rb:3:in `require_relative'
+# ./spec/ios/login_spec.rb:3:in `<top (required)>'
+Run options: exclude {:disabled=>true}
+
+All examples were filtered out
+
+Finished in 0.00026 seconds (files took 1.88 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+
+An error occurred while loading ./spec/ios/login_spec.rb.
+Failure/Error: require_all "#{File.join(File.expand_path(File.dirname(__FILE__)), '..', 'screens', 'ios')}"
+
+SyntaxError:
+  /Users/vibhadbaux/Documents/TileCodeRepository/tileapp_e2e-master/screens/ios/ios/tile_setup_screen.rb:108: syntax error, unexpected end-of-input, expecting keyword_end
+# ./spec/spec_helper.rb:21:in `<top (required)>'
+# ./spec/ios/login_spec.rb:3:in `require_relative'
+# ./spec/ios/login_spec.rb:3:in `<top (required)>'
+Run options: exclude {:disabled=>true}
+
+All examples were filtered out
+
+Finished in 0.00026 seconds (files took 1.82 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+
+An error occurred while loading ./spec/ios/login_spec.rb.
+Failure/Error: require_all "#{File.join(File.expand_path(File.dirname(__FILE__)), '..', 'helpers')}"
+
+SyntaxError:
+  /Users/vibhadbaux/Documents/TileCodeRepository/tileapp_e2e-master/helpers/tile_helpers.rb:150: syntax error, unexpected keyword_end, expecting end-of-input
+# ./spec/spec_helper.rb:23:in `<top (required)>'
+# ./spec/ios/login_spec.rb:3:in `require_relative'
+# ./spec/ios/login_spec.rb:3:in `<top (required)>'
+Run options: exclude {:disabled=>true}
+
+All examples were filtered out
+
+Finished in 0.00022 seconds (files took 1.87 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+  should not allow users to login with invalid credentials (FAILED - 3)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh+dev10@thetileapp.com', 'raghupannu'
+
+     NameError:
+       undefined local variable or method `wait_and_continue_accept_alert' for #<TileHelpers:0x007f950f25af48>
+     # ./helpers/tile_helpers.rb:93:in `login_with'
+     # ./spec/ios/login_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh@thetileapp.com', 'raghupannu'
+
+     NameError:
+       undefined local variable or method `wait_and_continue_accept_alert' for #<TileHelpers:0x007f951057f998>
+     # ./helpers/tile_helpers.rb:93:in `login_with'
+     # ./spec/ios/login_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     NameError:
+       undefined local variable or method `btn_wrong_login' for #<TileHelpers:0x007f95105a4018>
+       Did you mean?  btn_allow_notification
+     # ./helpers/tile_helpers.rb:76:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 2 minutes 47.6 seconds (files took 1.91 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+  should allow users to login to an unconfirmed account (FAILED - 1)
+  should allow users to login to a confirmed account (FAILED - 2)
+  should not allow users to login with invalid credentials (FAILED - 3)
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh+dev10@thetileapp.com', 'raghupannu'
+
+     NameError:
+       undefined local variable or method `wait_and_continue_accept_alert' for #<TileHelpers:0x007f85fba6c128>
+     # ./helpers/tile_helpers.rb:93:in `login_with'
+     # ./spec/ios/login_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  2) The Tile App should allow users to login to a confirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh@thetileapp.com', 'raghupannu'
+
+     NameError:
+       undefined local variable or method `wait_and_continue_accept_alert' for #<TileHelpers:0x007f85fbca8db0>
+     # ./helpers/tile_helpers.rb:93:in `login_with'
+     # ./spec/ios/login_spec.rb:15:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+  3) The Tile App should not allow users to login with invalid credentials
+     Failure/Error: $helpers.login_with_wrong_details 'vibha.ramesh@thetileapp.com', 'raghupannu123'
+
+     NameError:
+       undefined local variable or method `btn_wrong_login' for #<TileHelpers:0x007f85fba96900>
+       Did you mean?  btn_allow_notification
+     # ./helpers/tile_helpers.rb:76:in `login_with_wrong_details'
+     # ./spec/ios/login_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 2 minutes 51.8 seconds (files took 1.92 seconds to load)
+3 examples, 3 failures
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+rspec ./spec/ios/login_spec.rb:14 # The Tile App should allow users to login to a confirmed account
+rspec ./spec/ios/login_spec.rb:20 # The Tile App should not allow users to login with invalid credentials
+
+
+Finished in 1683 minutes 49 seconds (files took 0.72857 seconds to load)
+1 example, 0 failures
+
+
+Failures:
+
+  1) The Tile App should allow users to login to an unconfirmed account
+     Failure/Error: $helpers.login_with 'vibha.ramesh+dev10@thetileapp.com', 'raghupannu'
+
+     Selenium::WebDriver::Error::NoSuchElementError:
+       An element could not be located on the page using the given search parameters.
+     # ./helpers/tile_helpers.rb:32:in `btn_ignore'
+     # ./helpers/tile_helpers.rb:40:in `wait_continue_alert'
+     # ./helpers/tile_helpers.rb:112:in `login_with'
+     # ./spec/ios/login_spec.rb:8:in `block (2 levels) in <top (required)>'
+     # ./spec/spec_helper.rb:32:in `block (2 levels) in <top (required)>'
+
+Finished in 182 minutes 22 seconds (files took 1.94 seconds to load)
+2 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/ios/login_spec.rb:7 # The Tile App should allow users to login to an unconfirmed account
+

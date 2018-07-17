@@ -1,0 +1,12 @@
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+Run options: exclude {:disabled=>true}
+
+The Tile App
+
+Finished in 3065 minutes 53 seconds (files took 0.67361 seconds to load)
+1 example, 0 failures
+

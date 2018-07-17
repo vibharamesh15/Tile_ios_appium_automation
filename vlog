@@ -1,0 +1,25 @@
+#<Rake::TaskArguments >
+
+no device selected, trying to use the first available device
+invoking the iOS task with 05b0f9465c337bfbeb7c9ac86d8ceebbbf4114a3
+/Users/vibhadbaux/.rbenv/versions/2.4.0/bin/ruby -I/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-support-3.7.1/lib:/Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/lib /Users/vibhadbaux/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/rspec-core-3.7.1/exe/rspec spec/ios/login_spec.rb -t ~disabled --format documentation --format RspecJunitFormatter --out report.xml
+
+An error occurred while loading ./spec/ios/login_spec.rb.
+Failure/Error: require_all "#{File.join(File.expand_path(File.dirname(__FILE__)), '..', 'screens', 'ios')}"
+
+SyntaxError:
+  /Users/vibhadbaux/Documents/TileCodeRepository/tileapp_e2e-master/screens/ios/ios/tile_setup_screen.rb:42: syntax error, unexpected '\n', expecting =>
+  /Users/vibhadbaux/Documents/TileCodeRepository/tileapp_e2e-master/screens/ios/ios/tile_setup_screen.rb:45: syntax error, unexpected '}', expecting keyword_end
+       }   
+        ^
+  /Users/vibhadbaux/Documents/TileCodeRepository/tileapp_e2e-master/screens/ios/ios/tile_setup_screen.rb:91: syntax error, unexpected end-of-input, expecting keyword_end
+# ./spec/spec_helper.rb:21:in `<top (required)>'
+# ./spec/ios/login_spec.rb:3:in `require_relative'
+# ./spec/ios/login_spec.rb:3:in `<top (required)>'
+Run options: exclude {:disabled=>true}
+
+All examples were filtered out
+
+Finished in 0.00025 seconds (files took 2.25 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
+
