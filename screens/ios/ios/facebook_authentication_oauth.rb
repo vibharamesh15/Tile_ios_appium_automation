@@ -8,7 +8,7 @@ class ConfirmFBAuthScreen
 
   
 
-  def continue
-    @driver.find_element(:name, 'Continue')
+  def login
+    @driver.find_element(:name, 'Log In')
   end
 end

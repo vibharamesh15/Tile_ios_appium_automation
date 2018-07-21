@@ -125,10 +125,32 @@ def forgot_password(email)
     app.btn_login_facebook.click
     app= ConfirmFBAuthScreen.new @driver
    
+    wait_for { @driver.find_element(:xpath, '//XCUIElementTypeTextField') }
+    @driver.find_element(:xpath, '//XCUIElementTypeTextField').send_keys 'ramesh_vibha@yahoo.com'
+    @driver.find_element(:xpath, '//XCUIElementTypeTextField').click
+    wait_for { @driver.find_element(:xpath, '//XCUIElementTypeSecureTextField').click }
+    @driver.find_element(:xpath, '//XCUIElementTypeOther[@name="main"]//XCUIElementTypeSecureTextField').send_keys 'Swarasa123'
+
+    app.login.click
+
+    wait_for {@driver.find_element(:name, 'Continue')}
+    @driver.find_element(:name, 'Continue').click
 
 
+  $logger.info('[TILE HELPERS] Login - Setup')
+    app = TileSetupScreen.new @driver
+    app.check_and_fix_permissions('Always Allow')
     app.continue.click
+    @driver.manage.timeouts.implicit_wait = 5
+    wait_notifications_alert
+    
+    #app = TileFYPScreen.new @driver
+    #app.start_using_tile.click
 
+    app = TileListScreen.new @driver
+    #app.wait_notifications_alert
+    #
+    app
   end
   
   def login_without_permissions(email, password,p_flag,p_location)

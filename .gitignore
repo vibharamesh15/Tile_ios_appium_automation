@@ -54,3 +54,4 @@ build-iPhoneSimulator/
 jenkins_app.txt
 logfile.log
 report.xml
+*.log

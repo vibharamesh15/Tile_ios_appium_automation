@@ -100,8 +100,8 @@ RSpec.configure do |config|
     #server_url = "http://172.16.2.219:4723/wd/hub" # TODO: env
     server_url = "http://127.0.0.1:4723/wd/hub"
     http_client = Selenium::WebDriver::Remote::Http::Default.new
-    http_client.read_timeout = 60
-    http_client.open_timeout = 60
+    http_client.read_timeout = 240
+    http_client.open_timeout = 240
     @driver = Selenium::WebDriver.for(:remote, :desired_capabilities => caps, :url => server_url, :http_client => http_client)
 
     $helpers = TileHelpers.new @driver
@@ -119,6 +119,6 @@ RSpec.configure do |config|
   end
 
   def wait_for
-    Selenium::WebDriver::Wait.new(timeout: 60).until { yield }
+    Selenium::WebDriver::Wait.new(timeout: 90).until { yield }
   end
 end

@@ -95,6 +95,18 @@ task :ios_edit_tile_scenarios do
 end
 
 
+task :ios_basic_flow_scenarios do
+  RSpec::Core::RakeTask.new(:spec) do |t, args|
+    ENV['RUBYOPT'] = '-W0'
+    # ENV['APP'] = "#{File.dirname(__FILE__)}/#{Rake::FileList['*.ipa'].first}" unless ENV['APP']
+    # print "IOS: "  + ENV['APP']
+   # t.pattern = 'spec/ios/login_spec.rb'
+    t.pattern = 'spec/ios/tileflows/tile_ring_edit_flow_spec.rb'
+    t.rspec_opts = '-t ~disabled --format documentation --format RspecJunitFormatter --out report.xml'
+  end
+  Rake::Task['spec'].execute
+end
+
 
 desc 'Run all tests in the Android Test Suite'
 task :android do
